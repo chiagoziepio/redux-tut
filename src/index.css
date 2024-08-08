@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#root{
+  display:flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+body{
+  background: black;
+  color: white;
+}
+form button{
+  background: rgb(9, 9, 75);
+  margin: 2rem auto;
+  padding: 10px;
+  width: 12rem;
+}
+form input{
+  outline: none;
+  border: none;
+  padding: 10px;
+  color: black;
+  font-size: 18px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+
+}
+.li{
+  display: none;
+  width: 100%;
+  border: 1px solid green;
+}
