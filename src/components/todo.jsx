@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { deleteTodo } from "../features/Todos/todoSlice"
+import { fetchTodo } from '../features/Todos/todoSlice'
 
 const Todo = () => {
   const dispatch = useDispatch()
-  const todo = useSelector(state=> state.todos.todos)
-
+  const todo = useSelector(state=> state.todos.todos) 
+  
+  useEffect(()=>{
+    dispatch(fetchTodo())
+  },[])
   
   return (
     <div>
-      
+
       {todo.length?(
         <div>
             {todo.map((todo, index)=>(
